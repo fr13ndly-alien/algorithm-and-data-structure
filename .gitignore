@@ -21,3 +21,28 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+
+# Created by Jayesh J.
+*.iml
+*.ipr
+*.iws
+.idea
+out
+.cache/
+.history/
+.lib/
+dist/*
+target/
+bin/
+libexec/
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+logs/
+project/*-shim.sbt
+project/project/
+project/target/
+.scala_dependencies
+.worksheet
