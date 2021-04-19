@@ -1,0 +1,34 @@
+
+// url: https://leetcode.com/problems/two-sum/
+object TwoSum extends App {
+  def twoSum(nums: Array[Int], target: Int): Array[Int] = {
+    var result = Array.empty[Int]
+    for (i <- nums.indices.reverse) {
+      val numberToFind = target - nums(i)
+      val index = nums.lastIndexOf(numberToFind)
+      if (index > 0 && index != i)
+        result = Array(i, index)
+    }
+    result
+  }
+
+  class TestCase(_nums: Array[Int], _target: Int, _expected: Array[Int]) {
+    var nums: Array[Int] = _nums
+    var target: Int = _target
+    var expected: Array[Int] = _expected
+
+    def runTest(): Unit = {
+      val result = twoSum(nums, target)
+      if (result sameElements expected)
+        println("> Passed")
+      else println(s"> result [${result.mkString(",")}] " +
+        s"is not equal to [${expected.mkString(",")}]")
+    }
+  }
+
+  var test1 = new TestCase(Array(3,2,4), 6, Array(1,2))
+//  test1.runTest()
+
+  var test2 = new TestCase(Array(2,5,5,11), 10, Array(1,2))
+  test2.runTest()
+}
