@@ -1,5 +1,6 @@
 package Algorithm
 
+// https://leetcode.com/problems/palindrome-number/
 object Palindrome extends App {
   def isPalindrome(number: Int): Boolean = {
     // false if given number < 0 or number=10
